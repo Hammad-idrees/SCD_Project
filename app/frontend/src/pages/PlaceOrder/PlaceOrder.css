@@ -1,0 +1,156 @@
+.place-order {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  /* Allow wrapping on smaller screens */
+}
+
+.place-order-left,
+.place-order-right {
+  width: 100%;
+  max-width: max(30%, 500px);
+}
+
+.place-order-left .title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.place-order-left input {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c5c5c5;
+  outline-color: 4px;
+  outline-color: tomato;
+}
+
+.place-order-left .multi-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.place-order .cart-total button {
+  margin-top: 30px;
+}
+
+
+.payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.payment-methods label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  /* Increased font size for the label text */
+  color: #333;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+  vertical-align: middle;
+  /* Ensure text aligns properly with checkbox */
+}
+
+.payment-methods input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 22px;
+  /* Increased the size of the checkbox */
+  height: 22px;
+  /* Increased the size of the checkbox */
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  /* Slightly adjusted border radius for better appearance */
+  margin-right: 12px;
+  /* Increased the margin between checkbox and text */
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+  /* Fine-tune vertical alignment */
+  display: inline-block;
+  /* Keep checkbox inline */
+  vertical-align: middle;
+  /* Align checkbox with text */
+  transition: all 0.3s ease;
+}
+
+.payment-methods input[type="checkbox"]:checked {
+  background-color: tomato;
+  border-color: #007bff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px;
+}
+
+.payment-methods label:hover {
+  background-color: #f0f0f0;
+  border-color: #007bff;
+}
+
+.payment-methods input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .place-order {
+    flex-direction: column;
+    /* Stack the left and right sections vertically */
+    gap: 30px;
+    /* Reduce the gap between the two sections */
+  }
+
+  .place-order-left,
+  .place-order-right {
+    max-width: 100%;
+    /* Allow full width on smaller screens */
+  }
+
+  .place-order-left .title {
+    font-size: 24px;
+    /* Adjust title font size for smaller screens */
+    margin-bottom: 30px;
+  }
+
+  .place-order-left input {
+    padding: 8px;
+    /* Reduce input padding for mobile */
+  }
+
+  .place-order .cart-total button {
+    width: 100%;
+    /* Make the button full width */
+  }
+}
+
+@media (max-width: 480px) {
+  .place-order-left .title {
+    font-size: 20px;
+    /* Further reduce font size for very small screens */
+  }
+
+  .place-order-left input {
+    padding: 6px;
+    /* Further reduce padding for very small screens */
+  }
+
+  .place-order .cart-total button {
+    font-size: 16px;
+    /* Adjust the button text size */
+  }
+}

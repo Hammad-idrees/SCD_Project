@@ -1,0 +1,63 @@
+/* src/pages/Restaurants/Restaurants.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: tomato;
+  margin: 20px 0;
+}
+
+.restaurant-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.map-container {
+  margin-top: 20px;
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 500px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.map-container .leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.loading-message {
+  font-size: 18px;
+  color: #777;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Popup styling */
+.leaflet-popup-content {
+  font-size: 14px;
+  text-align: center;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #fff3cd;
+  /* Light yellow background */
+  border-radius: 8px;
+  border: 1px solid #ffeeba;
+  /* Matching yellow border */
+}
+
+.leaflet-popup-tip {
+  background: #ffeeba;
+}
